@@ -217,7 +217,7 @@ With the `preventExternalInvalidation` the input will not be invalidated though 
 All Formsy input components must be wrapped in the `Formsy.Wrapper` higher-order component, which provides the following properties and methods through `props`.
 
 ```jsx
-import { Wrapper } from 'formsy-react';
+import { Wrapper } from '@track0x1/formsy-react';
 
 class MyInput extends React.Component {
   render() {

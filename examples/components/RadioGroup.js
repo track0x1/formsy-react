@@ -1,5 +1,5 @@
 import React from 'react';
-import Formsy from 'formsy-react';
+import Formsy from 'formsy-react-es6';
 
 class MyRadioGroup extends React.Component {
   state = {};

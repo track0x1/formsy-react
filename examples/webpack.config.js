@@ -35,7 +35,7 @@ module.exports = {
 
   resolve: {
     alias: {
-      'formsy-react': '../../src/index'
+      'formsy-react-es6': '../../src/index'
     }
   },
 

@@ -46,7 +46,7 @@ Complete API reference is available [here](/API.md).
 #### Formsy gives you a form straight out of the box
 
 ```jsx
-  import Formsy from 'formsy-react';
+  import Formsy from 'formsy-react-es6';
 
   class MyAppForm extends React.Component {
     state = { canSubmit: false };
@@ -78,7 +78,7 @@ This code results in a form with a submit button that will run the `submit` meth
 
 #### Building a form element (required)
 ```jsx
-  import Formsy from 'formsy-react';
+  import Formsy from 'formsy-react-es6';
 
   class MyOwnInput extends React.Component {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Formsy from 'formsy-react';
+import Formsy from 'formsy-react-es6';
 
 class MyInput extends React.Component {
   // setValue() will set the value of the component, which in

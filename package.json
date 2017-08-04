@@ -1,10 +1,10 @@
 {
-  "name": "formsy-react",
+  "name": "formsy-react-es6",
   "version": "0.19.5",
   "description": "A form input builder and validator for React JS",
   "repository": {
     "type": "git",
-    "url": "https://github.com/christianalfoni/formsy-react.git"
+    "url": "https://github.com/track0x1/formsy-react.git"
   },
   "main": "lib/index.js",
   "scripts": {
