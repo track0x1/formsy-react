@@ -51,7 +51,8 @@ module.exports = function (Component) {
 
         static defaultProps = {
             validationError: '',
-            validationErrors: {}
+            validationErrors: {},
+            validations: Component.defaultProps ? Component.defaultProps.validations : undefined
         }
 
         componentWillMount() {
@@ -72,7 +73,11 @@ module.exports = function (Component) {
 
         // We have to make the validate method is kept when new props are added
         componentWillReceiveProps(nextProps) {
-            this.setValidations(nextProps.validations, nextProps.required);
+            if (nextProps.validations && !utils.isSame(this.props.validations, nextProps.validations)) {
+                // Only call setValidations when the validations prop has changed.
+                // This allows `defaultProps.validations` to stay intact.
+                this.setValidations(nextProps.validations, nextProps.required);
+            }
         }
 
         componentDidUpdate(prevProps) {
