@@ -29,7 +29,7 @@ You can look at examples in this repo or use the [formsy-react-components](https
 ## Install
 
   1. Download from this REPO and use globally (Formsy) or with requirejs
-  2. Install with `npm install formsy-react` and use with browserify etc.
+  2. Install with `npm install formsy-react-es6` and use with browserify etc.
 
 ## Changes
 
