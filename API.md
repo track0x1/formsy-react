@@ -35,7 +35,6 @@
   - [isPristine()](#ispristine)
   - [isFormDisabled()](#isformdisabled)
   - [isFormSubmitted()](#isformsubmitted)
-  - [validate](#validate)
   - [formNoValidate](#formnovalidate)
 - [Formsy.propTypes](#formsyproptypes)
 - [Formsy.addValidationRule](#formsyaddvalidationrule)
@@ -545,28 +544,6 @@ class MyInput extends React.Component {
 }
 ```
 You can check if the form has been submitted.
-
-#### <a name="validate">validate</a>
-```jsx
-class MyInput extends React.Component {
-  changeValue = (event) => {
-    this.props.setValue(event.target.value);
-  }
-  validate = () => {
-    return !!this.props.getValue();
-  }
-  render() {
-    return (
-      <div>
-        <input type="text" value={this.props.getValue()} onChange={this.changeValue}/>
-      </div>
-    );
-  }
-}
-
-React.render(<Formy.Form disabled={true}/>);
-```
-You can create custom validation inside a form element. The validate method defined will be run when you set new values to the form element. It will also be run when the form validates itself. This is an alternative to passing in validation rules as props.
 
 #### <a name="formnovalidate">formNoValidate</a>
 To avoid native validation behavior on inputs, use the React `formNoValidate` property.
