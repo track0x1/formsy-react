@@ -51,7 +51,8 @@ module.exports = function (Component) {
 
         static defaultProps = {
             validationError: '',
-            validationErrors: {}
+            validationErrors: {},
+            validations: Component.defaultProps ? Component.defaultProps.validations : undefined
         }
 
         componentWillMount() {
