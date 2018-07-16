@@ -1,4 +1,4 @@
-var React = global.React || require('react');
+var React = require('react');
 var PropTypes = require('prop-types');
 var hoistNonReactStatic = require('hoist-non-react-statics');
 var utils = require('./utils.js');
