@@ -46,6 +46,7 @@ Complete API reference is available [here](/API.md).
 #### Formsy gives you a form straight out of the box
 
 ```jsx
+  import React from 'react';
   import Formsy from 'formsy-react-es6';
 
   class MyAppForm extends React.Component {
@@ -66,18 +67,19 @@ Complete API reference is available [here](/API.md).
     render() {
       return (
         <Formsy.Form onValidSubmit={this.submit} onValid={this.enableButton} onInvalid={this.disableButton}>
-          <MyOwnInput name="email" validations="isEmail" validationError="This is not a valid email" required/>
+          <MyOwnInput value="" name="email" validations="isEmail" validationError="This is not a valid email" required/>
           <button type="submit" disabled={!this.state.canSubmit}>Submit</button>
         </Formsy.Form>
       );
     }
-  });
+  };
 ```
 
 This code results in a form with a submit button that will run the `submit` method when the submit button is clicked with a valid email. The submit button is disabled as long as the input is empty ([required](/API.md#required)) or the value is not an email ([isEmail](/API.md#validators)). On validation error it will show the message: "This is not a valid email".
 
 #### Building a form element (required)
 ```jsx
+  import React from 'react';
   import Formsy from 'formsy-react-es6';
 
   class MyOwnInput extends React.Component {
@@ -107,7 +109,7 @@ This code results in a form with a submit button that will run the `submit` meth
         </div>
       );
     }
-  });
+  };
 
   // Wrap the component in the Formsy.Wrapper higher-order component
   export default Formsy.Wrapper(MyOwnInput);
